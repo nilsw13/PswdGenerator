@@ -64,9 +64,9 @@ body{
 }
 
 #form__button {
-    margin-top: 2em;
+    margin-top: 0em;
     border: solid 0.5px;
-    padding: 0.3em 0.3em;
+    padding: 0.3em 0.4em;
     height: fit-content;
     width: fit-content;
     border-radius: 20px;
@@ -77,12 +77,13 @@ body{
 }
 
 #result{
+    margin: 1em 1em;
     display: flex;
     background-color: #fff;
-    width: 15em;
+    width: 12em;
     height: 3vh;
     padding-inline-start: 1em;
-    margin-bottom: 1em;
+
     border-radius: 20px;
     border: none;
     font-family: 'hackerchaos';
@@ -91,19 +92,25 @@ body{
 
 #options-container{
     display: flex;
-    margin: 1em 0em;
-    gap: 10%;
+    margin: 2em 2em;
+    gap: 4%;
+    
     
     
 }
 
 #options__input{
+    border: none;
     color: rgb(159, 236, 204);
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 0px 3px;
+   
 }
 
 #options__input input{
-    background-color: rgb(159, 236, 204);
-   
+    background-color: rgb(14, 15, 15);
+    
 }
 
 
