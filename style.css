@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'hackerchaos';
+    src:  url('hackerchaos.otf') format('truetype');
+        
+         
+
+    font-weight: normal;
+    font-style: normal;
+    }
+
+html{
+    
+
+    background-color: black;
+}
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#form__container {
+    padding: 2em 2em;
+    height: 30vh;
+    width: 15vw;
+    position: relative;
+    top: -10%;
+    left: 50%;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    -webkit-box-shadow:0px 0px 100px 11px rgba(45,255,196,0.36);
+    -moz-box-shadow: 0px 0px 100px 11px rgba(45,255,196,0.36);
+    box-shadow: 1px 5px 19px 0px rgba(45,255,196,0.36);
+    transition: 1.2s;
+}
+    
+    
+    
+
+
+#form__container:hover{
+    border-radius: 20px;
+    transform: translateY(-10px);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    -webkit-box-shadow:0px 0px 300px 11px rgba(45,255,196,0.36);
+    -moz-box-shadow: 0px 0px 300px 11px rgba(45,255,196,0.36);
+    box-shadow: 0px 0px 150px 11px rgba(45,255,196,0.36);
+}
+
+#form__button {
+    margin-top: 2em;
+    border: solid 0.5px;
+    padding: 0.3em 0.3em;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 20px;
+    color: rgb(159, 236, 204);
+    background-color: transparent;
+    font-family: 'hackerchaos';
+    font-size: 35px;
+}
+
+#result{
+    display: flex;
+    background-color: #fff;
+    width: 15em;
+    height: 3vh;
+    padding-inline-start: 1em;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    border: none;
+    font-family: 'hackerchaos';
+    color: rgb(159, 236, 204);
+}
+
+#options-container{
+    display: flex;
+    margin: 1em 0em;
+    gap: 10%;
+    
+    
+}
+
+#options__input{
+    color: rgb(159, 236, 204);
+}
+
+#options__input input{
+    background-color: rgb(159, 236, 204);
+   
+}
+
+
+#nbcarac{
+    position: relative;
+    left: -10%;
+    color: rgb(159, 236, 204);
+    font-family: 'hackerchaos';
+    font-size: 25px;
+    text-shadow: 4px 2px 3px rgb(159 236 204 / 50%);
+    
+}
+
+#lenght {
+    position: absolute;
+    font-size: 20px;
+    font-family:'hackerchaos' ;
+    background: rgb(255, 253, 253);
+    color: rgba(93, 167, 136, 0.747);
+    border: none;
+    border-radius: 10px;
+    height: 3vh;
+    width: 2.5vw;
+    margin: 1px -14px;
+    padding-inline-start: 0.3em;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8 />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="module" src="script.js"></script>
+    <title>Password Generatorr</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="column">
+            <div id="form__container">
+                <form action="" id="form">
+                    <span id="result">ta mere</span>
+                    <div id="">
+                    <label for="numbers" id="nbcarac">nb caracteres:</label>
+                    <input type="number" id="lenght">
+                    </div>
+                    <div id="options-container">
+                        <label for="" id="options__input"><input id="lowercase" type="checkbox">A-Z</label>
+                        <label for="" id="options__input"><input id="uppercase"  type="checkbox">a-z</label>
+                        <label for="" id="options__input"><input id="numbers"  type="checkbox">0-9</label>
+                        <label for="" id="options__input"><input id="specials"  type="checkbox">!/*?</label>
+                    </div>
+                    <button type="button" id="form__button">click me ! </button>
+                </form>
+            </div>
+        </div>
+        <div class="column">
+            <canvas id="canvas-container"></canvas>
+        </div>
+    </div>
+</body>
+</html>
