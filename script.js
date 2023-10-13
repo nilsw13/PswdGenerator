@@ -27,6 +27,10 @@ loader.load("scene.gltf", (gltf) => {
     animate();
 });
 
+
+
+
+
 // Initialisation de dat.GUI
 const gui = new dat.GUI();
 
@@ -42,7 +46,7 @@ scene.add(directionalLight);
 
 const bottomLight = new THREE.DirectionalLight(0xffffff, 0.5); // Couleur blanche avec une intensité de 0.5
 bottomLight.position.set(0, -1, 0);
-bottomLight.intensity = 100; // Position en dessous de la scène
+bottomLight.intensity = 100; 
 scene.add(bottomLight);
 
 
@@ -137,11 +141,42 @@ controls.minDistance = 3; // Distance minimale de zoom
 controls.maxDistance = 5; // Distance maximale de zoom
 
 // Animation de la scène
-const animate = () => {
-    requestAnimationFrame(animate);
-    controls.update();
-    renderer.render(scene, camera);
-};
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetRotationX = 0;
+    let targetRotationY = 0;
+
+    // Ajoutez un écouteur d'événements pour suivre les mouvements de la souris
+    document.addEventListener('mousemove', (event) => {
+        // Calculer la différence entre la position actuelle de la souris et sa position précédente
+        const deltaX = (event.clientX - mouseX) * 0.05; // Ajustez la sensi
+        const deltaY = (event.clientY - mouseY) * 0.05;
+
+        // Mettre à jour les valeurs de rotation cibles du modèle en fonction du mouvement de la souris
+        targetRotationY += deltaX;
+        targetRotationX += deltaY;
+
+        // Mettre à jour la position de la souris pour le prochain mouvement
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+    });
+
+    const dampingFactor = .01; // Ajustez le dampingFactor 
+
+    const animate = () => {
+        requestAnimationFrame(animate);
+
+        // Appliquer le dampingFactor aux rotations cibles
+        targetRotationX *= (1 - dampingFactor);
+        targetRotationY *= (1 - dampingFactor);
+
+        // Appliquer les rotations cibles au modèle avec smoothness
+        model.rotation.x += (targetRotationX - model.rotation.x) * 0.0001;
+        model.rotation.y -= (targetRotationY - model.rotation.y) * 0.0001;
+
+        
+        renderer.render(scene, camera);
+    };
 
 
 
