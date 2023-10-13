@@ -66,14 +66,14 @@ body{
 #form__button {
     margin-top: 0em;
     border: solid 0.5px;
-    padding: 0.3em 0.4em;
+    padding: 0.1em 0.4em;
     height: fit-content;
     width: fit-content;
-    border-radius: 20px;
+    border-radius: 15px;
     color: rgb(159, 236, 204);
     background-color: transparent;
     font-family: 'hackerchaos';
-    font-size: 35px;
+    font-size: 30px;
 }
 
 #result{
